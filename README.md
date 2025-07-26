@@ -1,42 +1,129 @@
-# Agentic AI App Hackathon Template
+# StudyAI
 
-Welcome! This repository is your starting point for the **Agentic AI App Hackathon**. It includes:
+StudyAI is an AI-powered educational assistant designed to enhance the studying experience. It features several intelligent tools including a YouTube summarizer, study plan generator, quiz generator, and a fully autonomous All-in-One agent that integrates all features into a single workflow.
 
-- A consistent folder structure  
-- An environment spec (`environment.yml` or `Dockerfile`)  
-- Documentation placeholders to explain your design and demo
+The application is built using Streamlit and leverages the Google Gemini API to simulate a personalized tutor and study helper.
 
-## 📋 Submission Checklist
+---
 
-- [ ] All code in `src/` runs without errors  
-- [ ] `ARCHITECTURE.md` contains a clear diagram sketch and explanation  
-- [ ] `EXPLANATION.md` covers planning, tool use, memory, and limitations  
-- [ ] `DEMO.md` links to a 3–5 min video with timestamped highlights  
+## Setup Instructions
 
+1. **Clone the repository**
 
-## 🚀 Getting Started
-
-1. **Clone / Fork** this template.  Very Important. Fork Name MUST be the same name as the teamn name
-
-
-## 📂 Folder Layout
-
-![Folder Layout Diagram](images/folder-githb.png)
+git clone https://github.com/adel100000/Adel-Mahmutovic
+cd studyai
 
 
 
-## 🏅 Judging Criteria
+2. **Install required dependencies**
 
-- **Technical Excellence **  
-  This criterion evaluates the robustness, functionality, and overall quality of the technical implementation. Judges will assess the code's efficiency, the absence of critical bugs, and the successful execution of the project's core features.
+It's recommended to use a virtual environment:
 
-- **Solution Architecture & Documentation **  
-  This focuses on the clarity, maintainability, and thoughtful design of the project's architecture. This includes assessing the organization and readability of the codebase, as well as the comprehensiveness and conciseness of documentation (e.g., GitHub README, inline comments) that enables others to understand and potentially reproduce or extend the solution.
+python -m venv venv
+source venv/bin/activate # On Windows: venv\Scripts\activate
+pip install streamlit google-generativeai python-dotenv firebase-admin requests uuid
 
-- **Innovative Gemini Integration **  
-  This criterion specifically assesses how effectively and creatively the Google Gemini API has been incorporated into the solution. Judges will look for novel applications, efficient use of Gemini's capabilities, and the impact it has on the project's functionality or user experience. You are welcome to use additional Google products.
 
-- **Societal Impact & Novelty **  
-  This evaluates the project's potential to address a meaningful problem, contribute positively to society, or offer a genuinely innovative and unique solution. Judges will consider the originality of the idea, its potential real‑world applicability, and its ability to solve a challenge in a new or impactful way.
+
+You may add any other modules you used manually here as well.
+
+3. **Environment Configuration**
+
+Create a .env file in the root of the project with your Gemini API key:
+
+GEMINI_API_KEY=your_gemini_key_here
+
+
+
+Also ensure your Firebase key is placed in a .json file and is listed in .gitignore to prevent uploading it publicly.
+
+---
+
+## How to Run the Agent
+
+1. Start the backend API by navigating to the correct path in your terminal and running:
+
+python api.py
+
+
+
+2. Start the frontend Streamlit interface by running:
+
+python -m streamlit run app.py
+
+
+
+The app will open in your browser. You can then use the following tools:
+
+- YouTube Summarizer
+- Study Plan Generator
+- Quiz Generator
+- All-in-One Agent (combines all tools into a single workflow)
+
+---
+
+## Dependencies
+
+The main dependencies for this project include:
+
+- streamlit
+- google-generativeai
+- python-dotenv
+- firebase-admin
+- requests
+- uuid
+
+Additional built-in modules used include: os, json, re, etc.
+
+---
+
+## Author
+
+This project was built solo by Adel Mahmutovic for The ODSC-Google-Cloud Agentic AI Hackathon.
+
+---
+
+## Notes
+
+- Be sure to keep the .json file and .env excluded from version control.
+- For API usage limits or quota errors, refer to the Gemini API documentation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
